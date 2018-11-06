@@ -1,0 +1,61 @@
+/* página principal */
+
+.main_div {
+	
+	margin-top: 5px;
+    margin-right: auto;
+    margin-left: auto;
+	width:60%;
+	overflow: hidden;
+	height: 1%;
+	background-color: #404040;
+	min-width: 600px;
+	border-radius: 5px;
+	padding: 5px;
+} 
+
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 20%;
+    padding: 5px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+} 
+.imagem{
+	border-style: groove;
+	border-width: 2px;
+	border-color: #ffffff;
+	border-radius: 4px;
+ }
+ */
+ .nulo{}
+
+ .barrapesquisa {
+	float:right;
+	padding: 10px;
+}
+
+.p {
+	padding:5px 10px;
+}
+
+.input {
+	border:1px solid #25692A;
+	border-radius:4px;
+	cursor:text;
+	font-family:Verdana;
+	font-weight:bold;
+	font-size:13px;
+	padding:5px 10px;
+	text-decoration:none;
+	max-width: 130px;
+
+}
