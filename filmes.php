@@ -26,8 +26,28 @@
 			</li>
 		</ul>
 		
+	<!--FILTROS-->
+		<div class="sec_div">
+				<h2 class="subh2">Gêneros</h2>
+					<input type="checkbox" name="filme" value="drama"/>Drama <br>
+					<input type="checkbox" name="filme" value="açao">Ação<br>
+					<input type="checkbox" name="filme" value="aventura">Aventura<br>
+					<input type="checkbox" name="filme" value="policia">Policial<br>
+					<input type="checkbox" name="filme" value="terror">Terror<br>
+					<input type="checkbox" name="filme" value="comedia">Comédia<br>
+					<input type="checkbox" name="filme" value="documentario">Documentário<br>
+					<input type="checkbox" name="filme" value="animacao">Animação<br>
+					<input type="checkbox" name="filme" value="musical">Musical<br>
+					<input type="checkbox" name="filme" value="suspense">Suspense<br>
+					<input type="checkbox" name="filme" value="infantil">Infantil<br>
+					<input type="checkbox" name="filme" value="anime">Anime<br>
+					<input type="checkbox" name="filme" value="romance">Romance<br>
+					<input type="checkbox" name="filme" value="ficcao">Ficção Científica<br>
+					<input class="submit" type="submit" value="Search" /><br><br>
+			</div>
 
-		<div class="container">
+
+		<div>
 
 			<?php
 			
@@ -46,12 +66,14 @@
 						$linha = pg_fetch_row($result,$i);
 						
 						echo "<a href='https://www.imdb.com/title/tt0120735/?ref_=nv_sr_1'>";
-						echo "<img class='imagem' src=".$linha[7].">";
+						echo '<img class="imagem" src="./img/';
+						echo $linha[7];
+						echo '">';
 						echo "</a>";
 						echo "<h2>" .$linha[1]. "</h2>";
 						echo "<h3>" .$linha[2]. "</h3>";
-						echo "<h4>Realizador: ".$linha[3]."</h4>";
-						echo "<h4>Elenco: ".$linha[4]." </h4>";
+						echo "<h4>Realizador: ".$linha[4]."</h4>";
+						echo "<h4>Elenco: ".$linha[3]." </h4>";
 						echo "<p>Descrição: " .$linha[5]." ";
 						echo "</p>";
 						
@@ -62,25 +84,6 @@
 	
 			
 			?>
-
-			<div class="sec_div">
-				<h2 class="subh2">Gêneros</h2>
-					<input type="checkbox" name="filme" value="drama"/>Drama <br>
-					<input type="checkbox" name="filme" value="açao">Ação<br>
-					<input type="checkbox" name="filme" value="aventura">Aventura<br>
-					<input type="checkbox" name="filme" value="policia">Policial<br>
-					<input type="checkbox" name="filme" value="terror">Terror<br>
-					<input type="checkbox" name="filme" value="comedia">Comédia<br>
-					<input type="checkbox" name="filme" value="documentario">Documentário<br>
-					<input type="checkbox" name="filme" value="animacao">Animação<br>
-					<input type="checkbox" name="filme" value="musical">Musical<br>
-					<input type="checkbox" name="filme" value="suspense">Suspense<br>
-					<input type="checkbox" name="filme" value="infantil">Infantil<br>
-					<input type="checkbox" name="filme" value="anime">Anime<br>
-					<input type="checkbox" name="filme" value="romance">Romance<br>
-					<input type="checkbox" name="filme" value="ficcao">Ficção Científica<br>
-					<input class="submit" type="submit" value="Search" /><br><br>
-			</div>
 		</div>	
 		
 	</body>

@@ -28,30 +28,35 @@
 		<section>
 		<table>	
         <tr>
-		  <form action="database/upimg.php" method="post" enctype="multipart/form-data">				
-			<th><input type="file" name="fileToUpload" id="fileToUpload"></th>
+		  <form action="database/upfilme.php" method="post" enctype="multipart/form-data">				
+	
 			<th><input type="text"  class="input" name="nome" placeholder="Nome"></th>
-		</tr>
-		<tr>
 			<th><input type="text" class="input" name="genero" placeholder="Gênero"></th>
-		</tr>
 			<th><input type="text" class="input" name="elenco" placeholder="Elenco"></th>
 			<th><input type="text" class="input" name="autor" placeholder="Autor"></th>
 			<th><input type="text" class="input" name="nacionalidade" placeholder="nacionalidade"></th>
-			<input type="submit" value="Upload Image" name="submit">
-		  </form>
+		</tr>
+		</table>
+		<table>
+		<tr>
+			<th><textarea name="mensagem" class="textarea" value="descrição" ></textarea></th>
+		</tr>
+			<th><input type="file" value= "Imagem" name="fileToUpload" id="fileToUpload"></th>
+			<th><input type="submit" value="Adicionar Filme" name="submit"></th>	
+		</tr>   
+		
+		</section>
+		</form>
 		   
         </tr>
         </table>
 		</section>	
 
-		<section class="sectextarea">
+	
 		
-		<tr>	
-		     <th><textarea name="mensagem" class="textarea" value="Descrição" ></textarea></th>
-		</tr>
 		
-		</section>
+		
+		
 
 		
 	</div>	
