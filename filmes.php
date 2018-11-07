@@ -57,7 +57,7 @@
 				$numfilmes = pg_numrows($result);
 				
 				$i=0;
-
+				//$id_f = array();
 				/*gera uma divisão para cada filme existente na base de dados*/
 				while ($i < $numfilmes){
 
@@ -65,10 +65,11 @@
 					
 						$linha = pg_fetch_row($result,$i);
 						
-						echo "<a href='https://www.imdb.com/title/tt0120735/?ref_=nv_sr_1'>";
+						echo "<a href='filmepag.php?id=$linha[0]'>";
 						echo '<img class="imagem" src="./img/';
 						echo $linha[7];
 						echo '">';
+						//$result[]
 						echo "</a>";
 						echo "<h2>" .$linha[1]. "</h2>";
 						echo "<h3>" .$linha[2]. "</h3>";
@@ -76,9 +77,14 @@
 						echo "<h4>Elenco: ".$linha[3]." </h4>";
 						echo "<p>Descrição: " .$linha[5]." ";
 						echo "</p>";
-						
+
 					echo "</div>";
-					$i ++;
+
+					$i ++;?>
+					<form method='POST' action='filmepag.php'>
+					<input type='hidden' name='i' value="<?php echo $i ?>">
+					<input type='hidden' name='arrayid' value="<?php echo htmlentities(serialize($id_f)); ?>" /> 
+					</form><?php
 				}
 
 	

@@ -8,7 +8,7 @@ $query = "set schema 'trabalho2';";
 pg_exec($conn, $query);
 	
 /*Definicao e execucao da query sql de consulta*/
-$query = "select * from filmes;";
+$query = "SELECT * from filmes ORDER BY id DESC;";
 $result = pg_exec($conn, $query);
 
 return $result;

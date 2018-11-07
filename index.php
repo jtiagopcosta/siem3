@@ -30,51 +30,47 @@
 		<div class="main_div">
 
 		<!-- primeira fila -->
+		
+		<div class="row">
+		
+		<?php 
 
-			<div class="row">
-				<div class="column">
+		include_once("database/getfilmes.php");
+
+		$result = get_filmes();	
+
+		global $j;
+		$j=0;
+		while ($j < 5) { 
+
+			$linha = pg_fetch_row($result,$j); ?>
+			
+			<div class="column">
 					<a href="https://www.imdb.com/title/tt0120735/?ref_=nv_sr_1">
-					<img  class="imagem" src="./img/lock.jpg" width="100%">
+					<img  class="imagem" src="./img/<?=$linha[7]?>" width="100%">
 					<a>
-				</div>
-				<div class="column">
-					<a href="https://www.imdb.com/title/tt5992164/?ref_=nv_sr_1">
-					<img class="imagem" src="./img/snatch.jpg" width="100%">
-					<a>
-				</div>
-				<div class="column">
-					<a href="https://www.imdb.com/title/tt0137523/?ref_=nv_sr_1">
-					<img class="imagem" src="./img/fight.jpg" width="100%">
-					<a>
-				</div>
-				<div class="column">
-					<a href="https://www.imdb.com/title/tt0110912/?ref_=nv_sr_2">
-					<img class="imagem" src="./img/pulp.jpg" width="100%">
-					<a>
-				</div>
-				<div class="column">
-					<a href="https://www.imdb.com/title/tt4425200/?ref_=nv_sr_4">
-					<img class="imagem" src="./img/john.jpg" width="100%">
-					<a>
-				</div>
 			</div>
+			
+		<?php $j++;  } ?>
+		</div>
 			
 			<!-- segunda fila -->
 			<div class="row">
 				
 				
-				<div class="column">
-					<a href="https://www.imdb.com/title/tt3890160/?ref_=nv_sr_1">
-					<img src="./img/baby.jpg" width="100%">
-					<a>
-				</div>
+				<?php 
 				
-			<!-- terceira fila -->
-				<div class="column">
-					<a href="https://www.imdb.com/title/tt0209144/?ref_=nv_sr_2">
-					<img src="./img/memento.jpg" width="100%">
-					<a>
-				</div>
+				while ($j < 10) { 
+
+					$linha = pg_fetch_row($result,$j); ?>
+					
+					<div class="column">
+							<a href="https://www.imdb.com/title/tt0120735/?ref_=nv_sr_1">
+							<img  class="imagem" src="./img/<?=$linha[7]?>" width="100%">
+							<a>
+					</div>
+					
+				<?php $j++;  } ?>
 			</div>
 		</div>
 	</body>

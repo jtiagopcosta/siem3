@@ -30,18 +30,18 @@
         <tr>
 		  <form action="database/upfilme.php" method="post" enctype="multipart/form-data">				
 	
-			<th><input type="text"  class="input" name="nome" placeholder="Nome"></th>
-			<th><input type="text" class="input" name="genero" placeholder="Gênero"></th>
-			<th><input type="text" class="input" name="elenco" placeholder="Elenco"></th>
-			<th><input type="text" class="input" name="autor" placeholder="Autor"></th>
+			<th><input type="text"  class="input" name="nome" placeholder="Nome" required></th>
+			<th><input type="text" class="input" name="genero" placeholder="Gênero" required></th>
+			<th><input type="text" class="input" name="elenco" placeholder="Elenco" required></th>
+			<th><input type="text" class="input" name="autor" placeholder="Autor" required></th>
 			<th><input type="text" class="input" name="nacionalidade" placeholder="nacionalidade"></th>
 		</tr>
 		</table>
 		<table>
 		<tr>
-			<th><textarea name="mensagem" class="textarea" value="descrição" ></textarea></th>
+			<th><textarea name="mensagem" class="textarea" value="descrição" required></textarea></th>
 		</tr>
-			<th><input type="file" value= "Imagem" name="fileToUpload" id="fileToUpload"></th>
+			<th><input type="file" value= "Imagem" name="fileToUpload" id="fileToUpload" required></th>
 			<th><input type="submit" value="Adicionar Filme" name="submit"></th>	
 		</tr>   
 		

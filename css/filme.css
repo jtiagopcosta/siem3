@@ -1,0 +1,50 @@
+.main_div {	
+	min-width: 600px;
+	width: 60%;
+	margin-top: 5px;
+	margin-right: auto;
+    margin-left: auto; 
+	overflow: hidden;
+	height: 1%;
+	background-color: #404040;
+	border-radius: 5px;
+	margin-bottom: 5px;
+} 
+
+.imagem{
+	
+	width:25%;
+	height: auto;
+	float: left;
+	border-style: groove;
+	border-width: 2px;
+	border-color: #ffffff;
+	border-radius: 4px;
+	margin: 20px 20px 20px 20px;
+}
+.text_div{
+	float: right;
+	text-align: justify;
+    text-justify: inter-word;
+	width: 65%;
+	padding-right: 20px;
+}
+.reviews{
+
+	margin: 400px 20px 0px 20px;
+	width: auto;
+	height: 50px;
+	background-color: #737373;
+	border-radius: 5px 5px 0px 0px;
+	text-align: center;
+	padding: 1px 0px;
+
+
+}
+.text_reviews{
+	margin: 0px 20px 20px 20px;
+	width: auto;
+	overflow: hidden;
+	height: 1%;
+	background-color:  #8c8c8c;
+}
