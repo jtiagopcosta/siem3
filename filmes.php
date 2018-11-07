@@ -75,7 +75,7 @@
 						echo "<h3>" .$linha[2]. "</h3>";
 						echo "<h4>Realizador: ".$linha[4]."</h4>";
 						echo "<h4>Elenco: ".$linha[3]." </h4>";
-						echo "<p>Descrição: " .$linha[5]." ";
+						//echo "<p>Descrição: " .$linha[5]." ";
 						echo "</p>";
 
 					echo "</div>";

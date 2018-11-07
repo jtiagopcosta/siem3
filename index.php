@@ -46,7 +46,7 @@
 			$linha = pg_fetch_row($result,$j); ?>
 			
 			<div class="column">
-					<a href="https://www.imdb.com/title/tt0120735/?ref_=nv_sr_1">
+					<a href="filmepag.php?id=<?=$linha[0]?>">
 					<img  class="imagem" src="./img/<?=$linha[7]?>" width="100%">
 					<a>
 			</div>
@@ -65,7 +65,7 @@
 					$linha = pg_fetch_row($result,$j); ?>
 					
 					<div class="column">
-							<a href="https://www.imdb.com/title/tt0120735/?ref_=nv_sr_1">
+							<a href="filmepag.php?id=<?=$linha[0]?>">
 							<img  class="imagem" src="./img/<?=$linha[7]?>" width="100%">
 							<a>
 					</div>
