@@ -30,10 +30,11 @@
 	float: right;
 	width: 12%;
 	margin-right: 20%;
-	height: 400px;
 	background-color: #737373;
 	border-radius: 5px;
 	overflow: hidden;
+	height: 1%;
+	padding: 0px 10px 10px 10px;
 }
 
 .movie_picture{
@@ -106,9 +107,7 @@ h3 {
 	margin-left: 5px;
 }
 
-.subh2 {
-	margin-left: 5px;
-}
+
 
 .div_moderador {
 	margin-top: 5px;

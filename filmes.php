@@ -83,6 +83,7 @@
 				
 					<input type="checkbox" name="filme" value="<?=$genero?>"/><?=$genero?><br>
 			<?php  } ?>
+			<input class="submit" type="submit" value="OK" name="pesquisar_genero">
 		</div>
 
 
