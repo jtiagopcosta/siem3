@@ -5,10 +5,25 @@
 	<head>
 		<link rel="stylesheet"  href="css/style.css" type="text/css"/>
 		<link rel="stylesheet"  href="css/sec.css" type="text/css"/>
+		<link rel="stylesheet"  href="css/paginas.css" type="text/css"/>
+		<link rel="stylesheet"  href="css/login.css" type="text/css"/>
+		<link rel="stylesheet"  href="css/barralateral.css" type="text/css"/>
+		<link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	</head>
 	
 	<body>
+
+	<div>
+		<ul class="barra">
+			<form method="POST">	
+				<a href="cadastro.php" class="registro">Registrar-se</a>
+				<input class="submitlogin" type="submit" value="Sign in" />
+				<li class="login"><input type="Password" name="senha" placeholder="Password" class="firstbar"></li>
+				<li class="login"><input type="Login" name="email" placeholder="Username" class="firstbar"></li>
+			</form>			
+		</ul>
+		</div>
 
 		<div id="div_top">
 				<h1>Cin&eacutefilos.pt</h1>
@@ -85,7 +100,7 @@
 						$linha = pg_fetch_row($result,$i);
 						
 						echo "<a href='filmepag.php?id=$linha[0]'>";
-						echo '<img class="imagem" src="./img/';
+						echo '<img class="movie_picture" src="./img/';
 						echo $linha[7];
 						echo '">';
 						echo "</a>";
