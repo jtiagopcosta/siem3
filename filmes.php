@@ -1,31 +1,14 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 
 	<head>
 		<link rel="stylesheet"  href="css/style.css" type="text/css"/>
-		<link rel="stylesheet"  href="css/paginas.css" type="text/css"/>
-		<link rel="stylesheet"  href="css/login.css" type="text/css"/>
-		<link rel="stylesheet"  href="css/barralateral.css" type="text/css"/>
-		<link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+		<link rel="stylesheet"  href="css/sec.css" type="text/css"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	</head>
 	
 	<body>
-		<div>
-			<ul class="barra">
-			<form method="POST">	
-				<a href="cadastro.php" class="registro">Registrar-se</a>
-				<input class="submitlogin" type="submit" value="Sign in" />
-				<li class="login"><input type="Password" name="senha" placeholder="Password" class="firstbar"></li>
-				<li class="login"><input type="Login" name="email" placeholder="Username" class="firstbar"></li>
-			</form>			
-			</ul>
-		</div>
-
-		<?php
-
-		?>
 
 		<div id="div_top">
 				<h1>Cin&eacutefilos.pt</h1>
@@ -44,37 +27,56 @@
 		</ul>
 		
 	<!--FILTROS-->
+
 		<div class="sec_div">
-				<h2 class="subh2">Gêneros</h2>
-					<input type="checkbox" name="filme" value="drama"/>Drama <br>
-					<input type="checkbox" name="filme" value="açao">Ação<br>
-					<input type="checkbox" name="filme" value="aventura">Aventura<br>
-					<input type="checkbox" name="filme" value="policia">Policial<br>
-					<input type="checkbox" name="filme" value="terror">Terror<br>
-					<input type="checkbox" name="filme" value="comedia">Comédia<br>
-					<input type="checkbox" name="filme" value="documentario">Documentário<br>
-					<input type="checkbox" name="filme" value="animacao">Animação<br>
-					<input type="checkbox" name="filme" value="musical">Musical<br>
-					<input type="checkbox" name="filme" value="suspense">Suspense<br>
-					<input type="checkbox" name="filme" value="infantil">Infantil<br>
-					<input type="checkbox" name="filme" value="anime">Anime<br>
-					<input type="checkbox" name="filme" value="romance">Romance<br>
-					<input type="checkbox" name="filme" value="ficcao">Ficção Científica<br>
-					<input class="submit" type="submit" value="Search" /><br><br>
-			</div>
+
+			<h2 class="subh2">Géneros</h2>
+
+			<?php
+			
+			include_once ("database/getfilmes.php"); 
+			$j=0;
+			global $result ;
+			$result = get_filmes();	
+			global $numfilmes;
+			$numfilmes = pg_numrows($result);
+			
+			/* extrair todos os géneros */
+			while($j < $numfilmes) {
+				$linha = pg_fetch_row ($result,$j);
+				$linhas[]=$linha[2];
+				$j++;
+			  }
+
+			/* Tendo em conta que na base de dados os géneros de cada filme estão separados por
+			virgulas é necessário separa-los.  É também preciso eliminar os espaços. Apos isto 
+			é criado um array com todos os generos existentes, se repetir nenhum*/
+
+			$generos = array();
+ 			foreach ($linhas as $genero){
+				$arr = explode(',', $genero);
+				 
+    			foreach($arr as $linhas){ if(trim($linhas) != '')
+         			$generos[] = trim($linhas);
+         		}
+    		 }
+     		$input = array();
+			 $input = array_unique($generos);
+			 
+			/*gerar a lista de géneros existentes*/ 
+			 foreach ($input as $genero){?>
+				
+					<input type="checkbox" name="filme" value="<?=$genero?>"/><?=$genero?><br>
+			<?php  } ?>
+		</div>
 
 
 		<div>
 
 			<?php
-			
-				include("database/getfilmes.php");
 
-				$result = get_filmes();	
-				$numfilmes = pg_numrows($result);
-				
 				$i=0;
-				//$id_f = array();
+
 				/*gera uma divisão para cada filme existente na base de dados*/
 				while ($i < $numfilmes){
 
@@ -86,7 +88,6 @@
 						echo '<img class="imagem" src="./img/';
 						echo $linha[7];
 						echo '">';
-						//$result[]
 						echo "</a>";
 						echo "<h2>" .$linha[1]. "</h2>";
 						echo "<h3>" .$linha[2]. "</h3>";
@@ -102,10 +103,7 @@
 					<input type='hidden' name='i' value="<?php echo $i ?>">
 					<input type='hidden' name='arrayid' value="<?php echo htmlentities(serialize($id_f)); ?>" /> 
 					</form><?php
-				}
-
-	
-			
+				}	
 			?>
 		</div>	
 		
