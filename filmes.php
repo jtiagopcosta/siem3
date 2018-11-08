@@ -1,14 +1,31 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 
 <html>
 
 	<head>
 		<link rel="stylesheet"  href="css/style.css" type="text/css"/>
-		<link rel="stylesheet"  href="css/sec.css" type="text/css"/>
+		<link rel="stylesheet"  href="css/paginas.css" type="text/css"/>
+		<link rel="stylesheet"  href="css/login.css" type="text/css"/>
+		<link rel="stylesheet"  href="css/barralateral.css" type="text/css"/>
+		<link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	</head>
 	
 	<body>
+		<div>
+			<ul class="barra">
+			<form method="POST">	
+				<a href="cadastro.php" class="registro">Registrar-se</a>
+				<input class="submitlogin" type="submit" value="Sign in" />
+				<li class="login"><input type="Password" name="senha" placeholder="Password" class="firstbar"></li>
+				<li class="login"><input type="Login" name="email" placeholder="Username" class="firstbar"></li>
+			</form>			
+			</ul>
+		</div>
+
+		<?php
+
+		?>
 
 		<div id="div_top">
 				<h1>Cin&eacutefilos.pt</h1>

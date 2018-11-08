@@ -1,0 +1,63 @@
+.firstbar {
+	border:1px solid black;
+	border-radius:4px;
+	cursor:text;
+	font-family:Verdana;
+	font-weight:bold;
+	font-size:13px;
+	padding:3px 15px;
+	text-decoration:none;
+	max-width: 130px;
+	margin-top: 5px;
+} 
+
+.barra{
+	width: 100%;
+	height: 35px;
+}
+
+.login
+{
+	float: right;
+}
+.submitlogin {
+	border:1px solid black;
+	border-radius:4px;
+	display:inline-block;
+	cursor:pointer;
+	font-family:Verdana;
+	font-weight:bold;
+	font-size:13px;
+	padding:3px 10px;
+	text-decoration:none;
+	float: right;
+	margin-top: 5px;
+}
+
+.registro {
+	float: right;
+	padding: 6px 10px;
+	font-family: 'Bangers', cursive;
+	font-size: 20px;
+	color: white;
+}
+.registro:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+.registro:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+.registro:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+.registro:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}

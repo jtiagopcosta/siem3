@@ -1,0 +1,91 @@
+.submit {
+	border:1px solid #25692A;
+	border-radius:4px;
+	display:inline-block;
+	cursor:pointer;
+	font-family:Verdana;
+	font-weight:bold;
+	font-size:13px;
+	padding:6px 50px;
+	text-decoration:none;
+	float: right;
+	margin-right: 5px;
+}
+
+.input {
+	border:1px solid #25692A;
+	border-radius:4px;
+	cursor:text;
+	font-family:Verdana;
+	font-weight:bold;
+	font-size:13px;
+	padding:5px 10px;
+	text-decoration:none;
+	max-width: 130px;
+
+}
+
+h3 {
+	margin-left: 5px;
+}
+
+.subh2 {
+	margin-left: 5px;
+}
+
+.div_moderador {
+	margin-top: 5px;
+    margin-right: auto;
+    margin-left: auto;
+	width:59%;
+	overflow: hidden;
+	height: 1%;
+	background-color: #404040;
+	min-width: 600px;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.textarea {
+	resize: none;
+	border-radius:4px;
+	cursor:text;
+	font-family:Verdana;
+	font-weight:bold;
+	font-size:13px;
+	text-decoration:none;
+	width: 612px;
+	height: 90px
+}
+
+.sectextarea {
+	padding-left: 160px;
+	height: 90px
+
+}
+
+.secbutton {
+	float: right;
+}
+
+.barrapesquisa {
+	float:right;
+	padding: 10px;
+}
+
+
+div.menu
+{
+width: 300px;
+height: 500px;
+background-color: #333;
+float: left;
+}
+
+p {
+	margin-left: 5px;
+}
+
+h4 {
+	margin-left: 5px;
+}

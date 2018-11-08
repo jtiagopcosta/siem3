@@ -4,12 +4,14 @@
 		<link rel="stylesheet"  href="css/style.css" type="text/css"/>
 		<link rel="stylesheet"  href="css/paginas.css" type="text/css"/>
 		<link rel="stylesheet"  href="css/login.css" type="text/css"/>
-		<link rel="stylesheet"  href="css/barralateral.css" type="text/css"/>
+		<link rel="stylesheet"  href="css/registro.css" type="text/css"/>
+	
 		<link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	</head>
 	
 <body>
+	<!--LOGIN-->
 	<div>
 		<ul class="barra">
 			<a href="paginaregistro.html" class="registro">Registrar-se</a>
@@ -35,43 +37,24 @@
 	</ul>
 	
 	<div class="div_moderador">
-		<h2 class="subh2">Inserir Filmes</h2>
-
-		<section>
-		<table>	
-        <tr>
-		  <form action="database/upfilme.php" method="post" enctype="multipart/form-data">				
+		<h2 class="subh2">Registro</h2>
 	
-			<th><input type="text"  class="input" name="nome" placeholder="Nome" required></th>
-			<th><input type="text" class="input" name="genero" placeholder="Gênero" required></th>
-			<th><input type="text" class="input" name="elenco" placeholder="Elenco" required></th>
-			<th><input type="text" class="input" name="autor" placeholder="Autor" required></th>
-			<th><input type="text" class="input" name="nacionalidade" placeholder="nacionalidade"></th>
-		</tr>
-		</table>
-		<table>
-		<tr>
-			<th><textarea name="mensagem" class="textarea" value="descrição" required></textarea></th>
-		</tr>
-			<th><input type="file" value= "Imagem" name="fileToUpload" id="fileToUpload" required></th>
-			<th><input type="submit" value="Adicionar Filme" name="submit"></th>	
-		</tr>   
+        				
+	<form method="POST">
 		
-		</section>
-		</form>
-		   
-        </tr>
-        </table>
-		</section>	
+			<input type="text" name="nome" class="input" placeholder="Nome Completo" maxlength="30">
+			<input type="email" name="email" class="input" placeholder="Usuário" maxlength="40">
+			<input type="text" name="idade" class="input"  placeholder="Idade" maxlength="2">
+			<input type="text" name="e_mail" class="input"  placeholder="E-mail" maxlength="15">
+			<input type="Password" name="senha" class="input"  placeholder="Senha" maxlength="32">
+			<input type="submit" class="submit" value="Confirmar" > 
+			
+	</form>	
+	</div>
 
-	
-		
-		
-		
-		
+	<?php
 
-		
-	</div>	
+?>	
 </body>
 
 </html>

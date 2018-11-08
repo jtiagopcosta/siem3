@@ -1,0 +1,111 @@
+/* página principal */
+
+.main_div {
+	
+	margin-top: 5px;
+    margin-right: auto;
+    margin-left: auto;
+	width:60%;
+	overflow: hidden;
+	height: 1%;
+	background-color: #404040;
+	min-width: 600px;
+	border-radius: 5px;
+	padding: 5px;
+} 
+
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 20%;
+    padding: 5px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+} 
+.imagem{
+	border-style: groove;
+	border-width: 2px;
+	border-color: #ffffff;
+	border-radius: 4px;
+ }
+ */
+ .nulo{}
+ 
+/* páginas secundárias */
+
+
+.container {
+	min-width: 600px;
+	width: 60%;
+	margin-top: 5px;
+	margin-right: auto;
+    margin-left: auto; 
+	overflow: hidden;
+	height: 1%;
+	
+}
+.main_div {	
+	overflow: hidden;
+	height: 1%;
+	float:left;
+	background-color: #404040;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	margin-left: 20%;
+	margin-right: auto;
+	width: 47.5%;
+} 
+
+.sec_div{
+    margin-top: 5px;	
+	float: right;
+	width: 12%;
+	margin-right: 20%;
+	height: 400px;
+	background-color: #737373;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.imagem{
+	padding: 20px 40px 20px 20px;
+	width:20%;
+	height: auto;
+	float: left;
+}
+.icon{
+	width:5%;
+	height: auto;
+	padding: 10px 10px 10px 10px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.padding{
+	padding-left: 20px;
+	
+}
+
+a.b:link {
+    color: white;
+    background-color: transparent;
+}
+
+a.b:visited {
+    color: blue;
+    background-color: transparent;
+}
+
+
