@@ -37,9 +37,9 @@
 			<li><a href="sobre.html">Sobre</a></li>
 			<li><a href="formulario.html">Inserir</a></li>
 			<li  class="barrapesquisa">
-				<form method="POST" action="filmespesquisados.php">
+            <form method="POST" action="filmespesquisados.php">
 				<input type="search" name="pesquisa" placeholder="pesquisa" class="input p">
-				</form>
+			</form>
 			</li>
 		</ul>
 		
@@ -96,13 +96,15 @@
 			<?php
 
 				$i=0;
-
+                include_once ("database/filtro.php");
+                $result2 = get_filmes_filtrados();	
+                $numfilmes2 = pg_numrows($result2);
 				/*gera uma divisão para cada filme existente na base de dados*/
-				while ($i < $numfilmes){
+				while ($i < $numfilmes2){
 
 					echo "<div class='main_div'>";
 					
-						$linha = pg_fetch_row($result,$i);
+						$linha = pg_fetch_row($result2,$i);
 						
 						echo "<a href='filmepag.php?id=$linha[0]'>";
 						echo '<img class="movie_picture" src="./img/';

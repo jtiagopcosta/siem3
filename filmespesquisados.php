@@ -38,7 +38,7 @@
 			<li><a href="formulario.html">Inserir</a></li>
 			<li  class="barrapesquisa">
 				<form method="POST" action="filmespesquisados.php">
-				<input type="search" name="pesquisa" placeholder="pesquisa" class="input p">
+				<input type="search" name="pesquisa"  placeholder="pesquisa" class="input p">
 				</form>
 			</li>
 		</ul>
@@ -95,35 +95,45 @@
 
 			<?php
 
-				$i=0;
+				$k=0;
+                include_once ("database/pesquisa.php");
+                global $result3;
+                global $numfilmes3;
+                $result3 = get_filmes_pesquisados();	
+                $numfilmes3 = pg_numrows($result3);
+                if ($numfilmes3==0){?>
+                    <div class='main_div'>
+                    <h3> Nenhum resultado encontrado</h3>
+                    </div><?php
+                } else {
+				    /*gera uma divisão para cada filme existente na base de dados*/
+                    while ($k < $numfilmes3){
 
-				/*gera uma divisão para cada filme existente na base de dados*/
-				while ($i < $numfilmes){
+                        echo "<div class='main_div'>";
+                        
+                            $linha = pg_fetch_row($result3,$k);
+                            
+                            echo "<a href='filmepag.php?id=$linha[0]'>";
+                            echo '<img class="movie_picture" src="./img/';
+                            echo $linha[7];
+                            echo '">';
+                            echo "</a>";
+                            echo "<h2>" .$linha[1]. "</h2>";
+                            echo "<h3>" .$linha[2]. "</h3>";
+                            echo "<h4>Realizador: ".$linha[4]."</h4>";
+                            echo "<h4>Elenco: ".$linha[3]." </h4>";
+                            //echo "<p>Descrição: " .$linha[5]." ";
+                            echo "</p>";
 
-					echo "<div class='main_div'>";
-					
-						$linha = pg_fetch_row($result,$i);
-						
-						echo "<a href='filmepag.php?id=$linha[0]'>";
-						echo '<img class="movie_picture" src="./img/';
-						echo $linha[7];
-						echo '">';
-						echo "</a>";
-						echo "<h2>" .$linha[1]. "</h2>";
-						echo "<h3>" .$linha[2]. "</h3>";
-						echo "<h4>Realizador: ".$linha[4]."</h4>";
-						echo "<h4>Elenco: ".$linha[3]." </h4>";
-						//echo "<p>Descrição: " .$linha[5]." ";
-						echo "</p>";
+                        echo "</div>";
 
-					echo "</div>";
-
-					$i ++;?>
-					<form method='POST' action='filmepag.php'>
-					<input type='hidden' name='i' value="<?php echo $i ?>">
-					<input type='hidden' name='arrayid' value="<?php echo htmlentities(serialize($id_f)); ?>" /> 
-					</form><?php
-				}	
+                        $k ++;?>
+                        <form method='POST' action='filmepag.php'>
+                        <input type='hidden' name='i' value="<?php echo $i ?>">
+                        <input type='hidden' name='arrayid' value="<?php echo htmlentities(serialize($id_f)); ?>" /> 
+                        </form><?php
+                    }	
+                }
 			?>
 		</div>	
 		
