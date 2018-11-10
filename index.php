@@ -34,7 +34,9 @@
 		<li><a href="sobre.html">Sobre</a></li>
 		<li><a href="formulario.html">Inserir</a></li>
 		<li  class="barrapesquisa">
-			<input type="search" name="pesquisa" placeholder="pesquisa" class="input p">
+			<form method="POST" action="filmespesquisados.php">
+				<input type="search" name="pesquisa"  placeholder="pesquisa" class="input p">
+			</form>
 		</li>
 	</ul>
 
@@ -84,6 +86,10 @@
 					
 				<?php $j++;  } ?>
 			</div>
+		</div>
+		<div class="main_div">
+			Utilizador:Admin<br>
+			Pass:Admin
 		</div>
 	</body>
 

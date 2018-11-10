@@ -1,3 +1,4 @@
+/*pagina individual para cada filme*/
 .main_div {	
 	min-width: 600px;
 	width: 60%;
@@ -31,7 +32,7 @@
 }
 .reviews{
 
-	margin: 400px 20px 0px 20px;
+	margin: 500px 20px 0px 20px;
 	width: auto;
 	height: 50px;
 	background-color: #737373;
