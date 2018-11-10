@@ -40,9 +40,9 @@
 			<div class="text_div">
 			<h2><?=$linha[1]?></h2>
 			<h3><?=$linha[2]?></h3>
-			<h4>Realizador: <?=$linha[4]?></h4>
-			<h4>Elenco: <?=$linha[3]?></h4>
-			<p>Descrição: <?=$linha[5]?></p>
+			<p><b>Realizador:</b> <?=$linha[4]?></p>
+			<p><b>Elenco:</b> <?=$linha[3]?></h4>
+			<p><b>Descrição:</b> <?=$linha[5]?></p>
 			</div>
 			
 			<div class="reviews">
