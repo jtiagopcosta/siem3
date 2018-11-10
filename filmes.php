@@ -14,11 +14,11 @@
 	<body>
 		<div>
 			<ul class="barra">
-			<form method="POST" action="login.php">	
-				<a href="cadastro.php" class="registro">Registar-se</a>
-				<input class="submitlogin" type="submit" value="Sign in" id="entrar" name="entrar" />
-				<li class="login"><input type="password" name="senha" id="senha" placeholder="Password" class="firstbar"></li>
-				<li class="login"><input type="text" name="login" id="login" placeholder="Username" class="firstbar"></li>
+			<form method="POST" action="database/validacao_user.php">	
+				<a href="registro.php" class="registro">Registar-se</a>
+				<input class="submitlogin" type="submit" value="Sign in"/>
+				<li class="login"><input type="password" name="senha"  placeholder="Password" class="firstbar"></li>
+				<li class="login"><input type="text" name="nome" placeholder="Username" class="firstbar"></li>
 			</form>			
 			</ul>
 		</div>

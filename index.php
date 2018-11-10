@@ -12,11 +12,12 @@
 <body>
 	<div >
 		<ul class="barra">
-			<a href="paginaregistro.html" class="registro">Registar-se</a>
+			<a href="registro.php" class="registro">Registar-se</a>
+		<form method="POST" action="database/validacao_user.php">
 			<input class="submitlogin" type="submit" value="Sign in" />
-			<li class="login"><input type="Password" name="pesquisa" placeholder="Password" class="firstbar"></li>
-			<li class="login"><input type="Login" name="pesquisa" placeholder="Username" class="firstbar"></li>		
-			
+			<li class="login"><input type="Password" name="senha" placeholder="Password" class="firstbar"></li>
+			<li class="login"><input type="Login" name="nome" placeholder="Username" class="firstbar"></li>		
+		</form>	
 		</ul>
 	</div>	
 
