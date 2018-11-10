@@ -35,6 +35,22 @@ pg_exec($conn, $query);
 $query = "INSERT INTO filmes (nome, genero, elenco, autor, nacionalidade, descrição, imagem ) VALUES ('$nome', '$genero', '$elenco', '$autor','$nacionalidade', '$descricao', '$path')";
 pg_query($conn, $query);
 
+/*
+//Explode on comma
+$vals = explode(',', $genero);
+ 
+//Trim whitespace
+foreach($vals as $key => $val) {
+    $vals[$key] = trim($val);
+}
+//Return empty array if no items found
+
+foreach($vals as $val){ 
+$query = "INSERT INTO generos (genero) VALUES ('$vals')";
+pg_query($conn, $query);
+}*/
+
+
 pg_close($conn); 
 
 /*
