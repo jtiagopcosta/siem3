@@ -64,12 +64,15 @@
 }
 
 a.b:link {
-    color: white;
+	margin-right: 5px;
+	margin-top: 5px;
+	float: right;
+    color: red;
     background-color: transparent;
 }
 
 a.b:visited {
-    color: blue;
+    color: red;
     background-color: transparent;
 }
 

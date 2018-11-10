@@ -108,6 +108,7 @@
 							echo $linha[7];
 							echo '">';
 							echo "</a>";
+							echo "<a class='b' href='database/deletefilme.php?id=$linha[0]' style='text-decoration:none'>X</a>";
 							echo "<h2>" .$linha[1]. "</h2>";
 							echo $linha[2];
 							echo "<p><b>Realizador: </b>".$linha[4]."</p>";
