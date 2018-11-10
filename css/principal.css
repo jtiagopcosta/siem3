@@ -12,7 +12,9 @@
 	min-width: 600px;
 	border-radius: 5px;
 	padding: 5px;
+	text-align: center;
 } 
+
 
 * {
     box-sizing: border-box;
